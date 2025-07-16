@@ -1,0 +1,574 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Lato:wght@300;400;700&display=swap");
+
+:root {
+  --gold: #d69e3d;
+  --black: #000;
+  --white: #fff;
+  --bg-beige: #f3f0e9;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+.site-header {
+  background: transparent;
+  position: absolute;       
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  max-width: 1200px;
+  width: 100%; 
+  margin: 0 auto;
+  padding: 1.5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content:  flex-start;
+  border-bottom: 1px solid #ffffff;    
+}
+
+
+.logo {
+  margin-left: 5rem; 
+      
+}
+
+.logo img {
+  width: 150px;  
+  transform: translateY(28px);
+}
+
+.main-nav {
+  position: absolute;  
+  top: 1.5rem;            
+  right: 5rem;  
+  transform: translateY(10px);        
+}
+
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;          
+  display: flex;
+  gap: 2.0rem;                 
+}
+
+.main-nav a {
+  font-family: "Lato", sans-serif;
+  font-weight: 400; 
+  font-size: 0.8rem;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  position: relative;
+  transition: color 0.3s ease;
+  line-height: 1; 
+}
+
+.main-nav a::after {                 
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #d69e3d;
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  color: #d69e3d;      
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  background: url("../images/hero-background.jpg") center / cover no-repeat;
+}
+
+.banner::before {                      
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-banner {
+  position: relative;                 
+  max-width: 800px;
+  padding: 0 1.5rem;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.hero-banner h2 {
+  font-family: "Lato", sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.break {                               
+  display: block;
+}
+
+.hero-banner p {
+  font-family: "Karla", sans-serif;
+  font-size: 1.0rem;
+  font-weight: 250;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background: var(--white);
+  color: var(--black);
+  padding: 0.9rem 2.25rem;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  border: 2px solid var(--white);
+  transition: all 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background: transparent;
+  color: var(--white);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+.welcome{
+   background: var(--bg-beige);
+   padding: 4rem 0 5rem;
+}
+  
+.welcome .container{ max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+  
+.section-sub{
+   font-family: "Karla", sans-serif;
+   font-size: 0.75rem;
+   letter-spacing: 0.8px;
+   text-transform: uppercase;
+   margin-bottom: 0.75rem;
+}
+
+.section-sub.gold{ color: var(--gold); }
+  
+.welcome-title{
+   font-family: "Lato", sans-serif;
+   font-size: clamp(2rem, 4vw, 2.75rem);
+   text-transform: uppercase;
+   margin-bottom: 2rem;
+}
+  
+
+.image-grid{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 1.5rem;
+}
+  
+
+.btn-outline{
+    display:inline-block;
+    background:#fff;
+    color:#000;
+    padding:.8rem 1.8rem;
+    border:none;
+    font:700 .9rem "Karla",sans-serif;
+    text-transform:uppercase;
+  }
+  
+
+.btn-frame{
+    display:inline-block;
+    background:transparent;
+    color:#fff;
+    padding:.8rem 1.8rem;
+    border:2px solid #fff;
+    font:700 .9rem "Karla",sans-serif;
+    text-transform:uppercase;
+    transition:all .3s ease; 
+}
+
+.btn-frame:hover,
+.btn-frame:focus{
+  background:#fff;           
+  color:#000;                
+  border-color:#fff;        
+}
+
+  
+.about-story{
+   background:var(--bg-beige);
+   padding:5rem 0;
+}
+  
+.story-grid{
+   max-width:1100px;
+   margin:0 auto;
+   padding:0 2rem;
+   display:grid;
+   grid-template-columns:1fr 1fr;
+   gap:2.5rem;
+   align-items:center;
+}
+  
+.story-img img{
+   width:100%; height:auto; display:block; border-radius:2px;
+}
+  
+.section-sub{ }
+.story-title{
+   font-family:"Lato",sans-serif;
+   font-size:clamp(1.75rem,4vw,2.25rem);
+   text-transform:uppercase;
+   margin-bottom:1.25rem;
+}
+  
+.story-text p{
+   font-family:"Karla",sans-serif;
+   font-size:.95rem;
+   line-height:1.5;
+   margin-bottom:1.25rem;
+}
+  
+.about-story .btn{
+   background:#000;
+   color:#fff;
+   padding:.8rem 1.8rem;
+   border:none;
+   text-transform:uppercase;
+   font-family:"Karla",sans-serif;
+   transition:background .3s;
+}
+  
+.about-story .btn:hover{
+    background:#848383;  
+  }
+  
+
+@media(max-width:768px){
+    .cta-split{ flex-direction: column; }
+   .story-grid{ grid-template-columns:1fr; }
+}
+
+.testimonials{
+   background:#000;             
+   color:#fff;
+   padding:5rem 0 6rem;
+}
+  
+.testimonials .container{
+   max-width:1200px;
+   margin:0 auto;
+   padding:0 2rem;
+}
+  
+
+.testimonials .section-subtitle{
+   font-family:"Karla",sans-serif;
+   font-size:.75rem;
+   letter-spacing:.8px;
+   text-transform:uppercase;
+   color:var(--gold);
+   margin-bottom:.5rem;
+}
+  
+.testimonials h2{
+   font-family:"Lato",sans-serif;
+   font-size:clamp(1.8rem,4vw,2.5rem);
+   text-transform:uppercase;
+   margin-bottom:3rem;
+   max-width:500px;     
+}
+  
+
+.testimonial-list{
+   display:flex;
+   flex-wrap:wrap;
+   gap:2rem;
+}
+  
+.testimonial{
+   position:relative;
+   flex:1 1 300px;      
+   max-width:350px;
+   overflow:hidden;
+}
+  
+.testimonial img{
+   width:100%;
+   height:auto;
+   display:block;
+   transition:transform .4s;
+}
+  
+
+.testimonial:hover img{ transform:scale(1.05); }
+ 
+.testimonial::after{
+   content:"";
+   position:absolute;
+   inset:0;
+   background:linear-gradient(to top, rgba(0,0,0,.75) 20%, rgba(0,0,0,.1) 80%);
+}
+  
+
+.testimonial-text{
+   position:absolute;
+   bottom:1.5rem;
+   left:1.5rem;
+   right:1.5rem;
+   z-index:1;
+   font-family:"Karla",sans-serif;
+}
+  
+
+.testimonial-text p{
+   font-size:.9rem;
+   line-height:1.45;
+   margin:0 0 .75rem;
+}
+  
+
+.testimonial-text cite{
+   font-style:normal;
+   font-size:.8rem;
+   color:var(--gold);
+   letter-spacing:.8px;
+}
+  
+
+.site-footer{
+   background:#000;
+   padding:3rem 0;
+   color:#fff;
+   border-top:1px solid #444;   
+   text-align:center;
+}
+  
+.site-footer .container{
+   max-width:1200px;
+   margin:0 auto;
+   padding:0 1rem;
+}
+  
+.site-footer p{
+   font-family:"Karla",sans-serif;
+   font-size:.85rem;
+   margin:0;
+}
+  
+@media(max-width:768px){
+  .testimonial-list{ flex-direction: column; align-items: center; }
+  .testimonial{ max-width: 400px; }        
+
+  
+  .testimonials .container{ padding: 0 1.5rem; }
+
+  
+  .testimonials h2{ font-size: 1.5rem; }
+
+
+  .testimonial{ margin-bottom: 2rem; }
+
+
+  .testimonial-text p{
+    font-size: .95rem;
+    line-height: 1.55;
+  }
+}
+
+@media(max-width:1023px){           
+    .cta-split{
+      grid-template-columns:1fr;
+      justify-items:center;
+    }
+    .cta-item{
+      max-width:80%;
+      padding:2.5rem 2rem;
+      align-items:center;
+      text-align:center;
+    }
+  }
+  
+  @media(max-width:767px){           
+    .cta-item{
+      max-width:100%;
+      padding:2rem 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px){
+
+    .cta-split{
+      display:flex;
+      justify-content:center;   
+      align-items:center;
+    }
+  
+    .cta-item{
+      flex: 0 0 auto;           
+      margin: 0 3rem;           
+      text-align:center;       
+      align-items:center;
+    }
+  
+    .menu-cta,
+    .locations-cta{
+      padding: 3rem 2rem;
+    }
+  }
+
+  .large-image img,
+.small-images img{
+   width: 100%;
+   height: auto;
+   display: block;
+   object-fit: cover;
+   border-radius: 2px;
+}
+  
+.small-images{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-auto-rows: 1fr;
+   gap: 1.5rem;
+}
+
+@media (max-width: 767px){
+
+    
+    .image-grid{
+      grid-template-columns: 1fr;   
+      gap: 1rem;                    
+    }
+  
+    .small-images{
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+
+  
+.why-visit{
+   background: var(--bg-beige);
+   padding: 4rem 0 5rem;
+   text-align: center;
+}
+  
+.why-visit .container{ max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+  
+.why-title{
+   font-family: "Lato", sans-serif;
+   font-size: clamp(2rem, 4vw, 2.5rem);
+   text-transform: uppercase;
+   margin-bottom: 3rem;
+}
+  
+
+.features{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 3rem;
+}
+  
+.feature{
+   flex: 1 1 260px;
+   max-width: 320px;
+}
+  
+.feature-icon{ width: 90px; height: auto; margin-bottom: 1.25rem; }
+  
+.feature h3{
+   font-family: "Lato", sans-serif;
+   font-size: 1.15rem;
+   text-transform: uppercase;
+   margin-bottom: 0.75rem;
+}
+  
+.feature p{
+   font-family: "Karla", sans-serif;
+   font-size: 0.9rem;
+   line-height: 1.45;
+   color: #222;
+}
+
+.cta-split{
+    background:url("../images/coffee-shop.jpeg") center/cover no-repeat;
+    position:relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height:340px;
+    overflow:hidden;
+}
+  
+.cta-split::before{                 
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    z-index:0;
+}
+  
+  
+.cta-item{
+    flex: 0 0 50%;
+    position:relative;
+    z-index:1;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-align: center;
+    gap:1.5rem;
+    padding:3rem 4rem;
+}
+  
+.menu-cta     { padding-left: 2rem; }
+.locations-cta{ padding-right:2rem; }
+  
+
+ .cta-sub{
+    font:700 .75rem/1 "Karla",sans-serif;
+    letter-spacing:.8px;
+    text-transform:uppercase;
+    color:var(--gold);
+}
+  
+
+.cta-title{
+    font:700 clamp(1.5rem,4vw,2rem)/1.15 "Lato",sans-serif;
+    text-transform:uppercase;
+}
+  
